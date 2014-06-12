@@ -1,5 +1,3 @@
-[![browser support](https://ci.testling.com/mattdesl/kami-mesh-buffer.png)](https://ci.testling.com/mattdesl/kami-mesh-buffer)
-
 # kami-mesh-buffer
 
 [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges)
