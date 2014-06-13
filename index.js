@@ -1,5 +1,5 @@
 /**
- * @module kami
+ * @module kami-mesh-buffer
  */
 
 var Class = require('klasse');
@@ -248,16 +248,21 @@ Mesh.Attrib = new Class({
 	type: null,
 
 	/**
+	 * Mesh vertex attribute holder.
+	 * 
 	 * Location is optional and for advanced users that
 	 * want vertex arrays to match across shaders. Any non-numerical
 	 * value will be converted to null, and ignored. If a numerical
 	 * value is given, it will override the position of this attribute
 	 * when given to a mesh.
-	 * 
-	 * @param  {[type]} name          [description]
-	 * @param  {[type]} numComponents [description]
-	 * @param  {[type]} location      [description]
-	 * @return {[type]}               [description]
+	 *
+	 * @class  Mesh.Attrib
+	 * @constructor
+	 * @param {String} name the name of the attribute
+	 * @param {Number} numComponents the number of components, e.g. 2 for vec2
+	 * @param {Number} location optional attribute index location
+	 * @param {Number} type defaults to GL_FLOAT 
+	 * @param {Number} normalize whether to normalize to 0-1, default false
 	 */
 	initialize: function(name, numComponents, location, type, normalize, offsetCount) {
 		this.name = name;
