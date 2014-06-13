@@ -55,7 +55,7 @@ var Mesh = new Class({
 			throw "numVerts not specified, must be > 0";
 
 		this.context = wrapContext(context);
-		this.gl = context.gl;
+		this.gl = this.context.gl;
 		
 		this.numVerts = null;
 		this.numIndices = null;
