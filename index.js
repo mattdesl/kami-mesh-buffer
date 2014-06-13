@@ -1,4 +1,6 @@
 /**
+ * A mesh class that wraps VBO and IBO. Mostly used internally.
+ * 
  * @module kami-mesh-buffer
  */
 
@@ -7,7 +9,7 @@ var wrapContext = require('kami-util').wrapContext;
 
 //TODO: decouple into VBO + IBO utilities 
 /**
- * A mesh class that wraps VBO and IBO. Mostly used internally.
+ * 
  *
  * @class  Mesh
  */
