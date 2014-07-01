@@ -5,7 +5,7 @@
  */
 
 var Class = require('klasse');
-var wrapContext = require('kami-util').wrapContext;
+var BaseObject = require('kami-util').BaseObject;
 
 //TODO: decouple into VBO + IBO utilities 
 /**
@@ -49,12 +49,12 @@ var Mesh = new Class({
 	 * @return {[type]}                [description]
 	 */
 	initialize: function Mesh(context, isStatic, numVerts, numIndices, vertexAttribs) {
-		if (!context || typeof context !== "object")
-			throw "valid GL context not specified to mesh buffer";
+		//TODO: use options here...
 		if (!numVerts)
 			throw "numVerts not specified, must be > 0";
 
-		this.context = wrapContext(context);
+		BaseObject.call(this, context);
+
 		this.gl = this.context.gl;
 		
 		this.numVerts = null;
